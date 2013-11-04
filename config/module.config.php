@@ -25,7 +25,7 @@ return array(
     ),        
     'service_manager' => array(
         'invokables' => array(
-            'Glups' => 'Hosting\\Service\\Glups'
+            'AutomatedInstall' => 'Hosting\\Service\\AutomatedInstall'
         )
     )
 );

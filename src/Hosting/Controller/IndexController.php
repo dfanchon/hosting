@@ -9,7 +9,7 @@ class IndexController extends AbstractController
        
     function indexAction ()
     {
-        Manager::getService('Glups');
+        Manager::getService('AutomatedInstall');
         
     }
 }

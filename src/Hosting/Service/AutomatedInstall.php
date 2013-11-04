@@ -2,7 +2,7 @@
 namespace Hosting\Service;
 use Rubedo\Update\Install;
 
-class Glups extends Install
+class AutomatedInstall extends Install
 {
 
     protected $installObject;
