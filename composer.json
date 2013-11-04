@@ -1,0 +1,9 @@
+{
+	"name": "webtales/hosting",
+	"require": {
+		"php": ">=5.3.0"
+	},
+	"autoload": {
+        "classmap": ["src/Hosting"]
+    }
+}
