@@ -1,13 +1,15 @@
 <?php
 namespace Hosting\Controller;
 
-use Zend\View\Model\ViewModel;
-use Zend\Mvc\Controller\AbstractActionController;
+use Rubedo\Services\Manager;
+use Rubedo\Blocks\Controller\AbstractController;
 
-class IndexController extends AbstractActionController
+class IndexController extends AbstractController
 {
+       
     function indexAction ()
     {
-        echo "ok";
+        Manager::getService('Glups');
+        
     }
 }

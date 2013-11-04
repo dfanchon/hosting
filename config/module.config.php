@@ -22,5 +22,10 @@ return array(
         'invokables' => array(
             'Hosting\\Controller\\Index' => 'Hosting\\Controller\\IndexController'
         )
+    ),        
+    'service_manager' => array(
+        'invokables' => array(
+            'Glups' => 'Hosting\\Service\\Glups'
+        )
     )
 );
