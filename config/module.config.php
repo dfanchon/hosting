@@ -7,11 +7,11 @@ return array(
             'hosting' => array(
                 'type' => 'Zend\Mvc\Router\Http\Literal',
                 'options' => array(
-                    'route' => '/hosting',
+                    'route' => '/hosting/create',
                     'defaults' => array(
-                        '__NAMESPACE__' => 'Hosting\\Controller',
+                        '__NAMESPACE__' => 'Hosting\\Account\\Controller',
                         'controller' => 'Index',
-                        'action' => 'index'
+                        'action' => 'create'
                     )
                 ),
                 'may_terminate' => true
@@ -20,7 +20,7 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
-            'Hosting\\Controller\\Index' => 'Hosting\\Controller\\IndexController'
+            'Hosting\\Account\\Controller\\Index' => 'Hosting\\Account\\Controller\\IndexController'
         )
     ),        
     'service_manager' => array(

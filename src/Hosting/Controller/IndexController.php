@@ -9,7 +9,7 @@ class IndexController extends AbstractController
        
     function indexAction ()
     {
-        Manager::getService('AutomatedInstall');
-        
+       $config =  Manager::getService('AutomatedInstall');
+       print_r($config);
     }
 }

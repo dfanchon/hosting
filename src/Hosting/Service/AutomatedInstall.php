@@ -1,19 +1,17 @@
 <?php
 namespace Hosting\Service;
 use Rubedo\Update\Install;
+use Rubedo\Collection\AbstractCollection;
 
 class AutomatedInstall extends Install
 {
 
-    protected $installObject;
-
     public function __construct ()
     {
-        
-        parent::__construct();
-        
+              
         \Rubedo\User\CurrentUser::setIsInstallerUser(true);
-
+        AbstractCollection::disableUserFilter();
+        
         $this->installObject = new \Rubedo\Update\Install();
         if (! $this->installObject->isConfigWritable()) {
             throw new \Rubedo\Exceptions\User('Local config file %1$s should be writable', "Exception29", $this->localConfigFile);
@@ -25,7 +23,7 @@ class AutomatedInstall extends Install
             $this->config['installed'] = array();
         }
 
-        return $this->config;
-
     }
+    
+ 
 }
